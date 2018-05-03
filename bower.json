@@ -30,7 +30,7 @@
     "tests"
   ],
   "dependencies": {
-    "froala-wysiwyg-editor": "git@github.com:mthomasson/wysiwyg-editor.git#2e6705b5b622d432a9d69e9b237fdcec1a4f6f30",
+    "froala-wysiwyg-editor": "git@github.com:mthomasson/wysiwyg-editor.git#bb65d817cc8c7c329c9a6b413b02e8747bf173f0",
     "angular": ">=1.0"
   },
   "devDependencies": {

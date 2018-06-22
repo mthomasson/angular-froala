@@ -30,7 +30,6 @@
         require: 'ngModel',
         scope: scope,
         link: function(scope, element, attrs, ngModel) {
-          debugger
           if (jQuery) element = jQuery(element);
 
           var specialTag = false;
@@ -76,6 +75,7 @@
                 }
               }
               else {
+                debugger
                 // Set HTML.
                 element.froalaEditor('html.set', ngModel.$viewValue || '', true);
 
@@ -88,6 +88,7 @@
             };
 
             ngModel.$isEmpty = function(value) {
+              debugger
               if (!value) {
                 return true;
               }

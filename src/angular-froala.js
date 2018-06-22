@@ -30,6 +30,7 @@
         require: 'ngModel',
         scope: scope,
         link: function(scope, element, attrs, ngModel) {
+          debugger
           if (jQuery) element = jQuery(element);
 
           var specialTag = false;

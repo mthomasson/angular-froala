@@ -75,26 +75,25 @@
                 }
               }
               else {
-                debugger
-                // Set HTML.
-                element.froalaEditor('html.set', ngModel.$viewValue || '', true);
 
-                if (ctrl.editorInitialized) {
-                  //This will reset the undo stack everytime the model changes externally. Can we fix this?
-                  element.froalaEditor('undo.reset');
+                  if (ctrl.editorInitialized) {
+                      // Set HTML
+                      element.froalaEditor('html.set', ngModel.$viewValue || '', true);
+                      //This will reset the undo stack everytime the model changes externally. Can we fix this?
+                      element.froalaEditor('undo.reset');
                   element.froalaEditor('undo.saveStep');
                 }
               }
             };
 
             ngModel.$isEmpty = function(value) {
-              debugger
               if (!value) {
                 return true;
               }
-
-              var isEmpty = element.froalaEditor('node.isEmpty', jQuery('<div>' + value + '</div>').get(0));
-              return isEmpty;
+                if (ctrl.editorInitialized) {
+                    return element.froalaEditor('node.isEmpty', jQuery('<div>' + value + '</div>').get(0));
+                }
+               return true;
             };
           };
 
